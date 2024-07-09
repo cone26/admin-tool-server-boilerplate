@@ -11,7 +11,7 @@ export default registerAs(
     username: process.env.COMMON_DB_ID,
     password: process.env.COMMON_DB_PW,
     name: process.env.COMMON_DB_NAME,
-    database: process.env.COMMOn_DB_DATABASE,
+    database: process.env.COMMON_DB_DATABASE,
     entities: [`dist/libs/dao/src/admin/**/*.entity.!(js.map){,+(ts,js)}`],
     synchronize:
       process.env.COMMON_DB_SYNCHRONIZE &&
