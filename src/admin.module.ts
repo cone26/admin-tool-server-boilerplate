@@ -1,7 +1,7 @@
-import { AdminServerConfig } from './admin.server.config';
+import { AdminServerConfig } from './config/admin.server.config';
 import { Module } from '@nestjs/common';
-import { AdminController } from './admin.controller';
-import { AdminService } from './admin.service';
+import { AdminController } from './default/admin.controller';
+import { AdminService } from './default/admin.service';
 
 @Module({
   imports: [AdminServerConfig],
