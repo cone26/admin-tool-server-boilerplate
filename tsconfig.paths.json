@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./", //추가
+      "paths": {
+        "@libs/common": [ //alias
+          "libs/common/src"
+        ],
+        "@libs/common/*": [
+          "libs/common/src/*"
+        ],
+        "@libs/dao": [
+          "libs/dao/src"
+        ],
+        "@libs/dao/*": [
+          "libs/dao/src/*"
+        ]
+      }
+    }
+  }
