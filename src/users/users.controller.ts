@@ -1,24 +1,25 @@
 import { Crud, CrudController } from '@dataui/crud';
-import { UserEntity } from '@libs/dao/common/user/entities/user.entity';
 import { Controller } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { UsersService } from './users.service';
+import { UserDto } from '@libs/dao/common/user/dto/user.dto';
+import { User } from '@libs/dao/common/user/user.entity';
 
 @Controller('users')
 @ApiTags('users')
 @Crud({
-  model: { type: UserEntity },
+  model: { type: User },
   dto: {
-    create: UserEntity,
-    update: UserEntity,
-    replace: UserEntity,
+    create: UserDto,
+    update: UserDto,
+    replace: UserDto,
   },
   serialize: {
-    create: UserEntity,
-    update: UserEntity,
-    replace: UserEntity,
+    create: UserDto,
+    update: UserDto,
+    replace: UserDto,
   },
 })
-export class UsersController implements CrudController<UserEntity> {
+export class UsersController implements CrudController<User> {
   constructor(public service: UsersService) {}
 }

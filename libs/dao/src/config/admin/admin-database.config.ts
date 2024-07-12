@@ -12,9 +12,7 @@ export default registerAs(
     password: process.env.ADMIN_DB_PW,
     name: process.env.ADMIN_DB_NAME,
     database: process.env.ADMIN_DB_DATABASE,
-    entities: [
-      `dist/libs/dao/src/admin/**/entities/*.entity.!(js.map){,+(ts,js)}`,
-    ],
+    entities: [`dist/libs/dao/src/admin/**/*.entity.!(js.map){,+(ts,js)}`],
     synchronize:
       process.env.ADMIN_DB_SYNCHRONIZE &&
       JSON.parse(process.env.ADMIN_DB_SYNCHRONIZE),

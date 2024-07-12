@@ -1,8 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { User } from '../interfaces/user.interface';
 
 @Entity('user')
-export class UserEntity implements User {
+export class User {
   @PrimaryGeneratedColumn({ comment: 'user id', unsigned: true })
   id: number;
 
