@@ -1,7 +1,7 @@
 import { EntityRepository } from '@libs/common/database/typeorm/typeorm-ex.decorator';
-import { UserEntity } from '../entities/user.entity';
 import { AbstractRepository } from '@libs/common/database/abstract.respository';
-import { UsersRepository } from '../interfaces/users-repository.interface';
+import { UserEntity } from '@libs/dao/admin/user/entities/user.entity';
+import { UsersRepository } from '@libs/dao/admin/user/interfaces/users-repository.interface';
 
 @EntityRepository(UserEntity)
 export class UsersDbRepository
