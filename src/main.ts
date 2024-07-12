@@ -1,9 +1,9 @@
 import { NestFactory } from '@nestjs/core';
-import { AdminModule } from './admin.module';
+import { AppModule } from './app.module';
 import { AdminServer } from './admin.server';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AdminModule);
+  const app = await NestFactory.create(AppModule);
 
   const adminServer = new AdminServer(app);
   await adminServer.init();

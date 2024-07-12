@@ -12,7 +12,9 @@ export default registerAs(
     password: process.env.COMMON_DB_PW,
     name: process.env.COMMON_DB_NAME,
     database: process.env.COMMON_DB_DATABASE,
-    entities: [`dist/libs/dao/src/common/**/*.entity.!(js.map){,+(ts,js)}`],
+    entities: [
+      `dist/libs/dao/src/common/**/entities/*.entity.!(js.map){,+(ts,js)}`,
+    ],
     synchronize:
       process.env.COMMON_DB_SYNCHRONIZE &&
       JSON.parse(process.env.COMMON_DB_SYNCHRONIZE),
