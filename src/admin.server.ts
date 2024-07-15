@@ -9,6 +9,7 @@ export class AdminServer {
    */
   async init() {
     this.app.setGlobalPrefix('admin');
+    this.app.enableCors();
     this._initializeSwagger();
   }
 
